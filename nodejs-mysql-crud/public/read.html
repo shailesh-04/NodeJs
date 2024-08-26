@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Users</title>
+</head>
+<body>
+    <h1>Users List</h1>
+    <table id="users-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Users will be populated here -->
+        </tbody>
+    </table>
+    <script>
+        fetch('/read')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.querySelector('#users-table tbody');
+                data.forEach(user => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td>${user.id}</td><td>${user.name}</td><td>${user.email}</td>`;
+                    tbody.appendChild(tr);
+                });
+            });
+    </script>
+</body>
+</html>
