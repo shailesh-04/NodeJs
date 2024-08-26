@@ -1,0 +1,19 @@
+{
+  "name": "item_management",
+  "version": "1.0.0",
+  "description": "This Project For Item Management from admin side",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "test"
+  },
+  "author": "shailesh.zala",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.1.4"
+  }
+}
