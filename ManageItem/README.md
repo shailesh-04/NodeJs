@@ -9,12 +9,12 @@
   ├── /routes
   │   └── item.routes.js
   ├── /models
-  │   └── item.model.js
+  t;ut│   └── item.model.js
   ├── /public
   │   └── index.html
   ├── server.js
   ├── /view
-  │   ├─── moduls
+  │   ├─── react(view)
   │   │   ├── /src
   │   │   │   ├─ /components
   │   │   │   │   └──pase1.jsx
