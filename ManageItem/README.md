@@ -1,6 +1,7 @@
- File stucture
+-- File stucture
 /ManageItem
 -----------
+<pre>
   ├── /config
   │   └── db.config.js
   ├── /controllers
@@ -28,3 +29,4 @@
   │         └──from1.jsx
   │         └──from2.jsx
   ├── README.md
+</pre>
