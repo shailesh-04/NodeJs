@@ -9,7 +9,7 @@
   ├── /routes
   │   └── item.routes.js
   ├── /models
-  t;ut│   └── item.model.js
+  │   └── item.model.js
   ├── /public
   │   └── index.html
   ├── server.js
