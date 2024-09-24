@@ -1,0 +1,25 @@
+{
+  "name": "prj",
+  "version": "1.0.0",
+  "description": "dec",
+  "main": "app.js",
+  "scripts": {
+    "create-table":"node database/tables.js",
+    "dummy-data":"node database/dummyRecord.js",
+    "start": "nodemon app.js",
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mysql": "^2.18.1",
+    "socket.io": "^4.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
