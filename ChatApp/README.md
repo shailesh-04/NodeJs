@@ -31,6 +31,11 @@
   ├── package.json
   ├── README.md
 </pre>
+-- Istall Depency
+```
+npm install
+
+```
 -- Tables For This Project
 ```
 npm run create-table
@@ -39,4 +44,9 @@ npm run create-table
 ```
 npm run dummy-data
 
+```
+-- run
+
+```
+npm start
 ```
