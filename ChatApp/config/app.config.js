@@ -12,7 +12,7 @@ try {
       secret: process.env.SECRET_KEY,
       resave: false,
       saveUninitialized: true,
-      cookie: { maxAge: 10 }
+      cookie: { maxAge: 24*60*60*1000 }
     }));
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());

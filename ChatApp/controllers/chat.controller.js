@@ -12,9 +12,8 @@ try {
     model.login(req.body,(err,result)=>{
       if(err) res.status(500).send({ err : err.sqlMessage});
       if (result.length > 0) {
-            //req.session.user = result[0];
-            //res.redirect('/');
-            res.render('app.html',{user:result[0]});
+            req.session.user = result[0];
+            res.redirect('/');
         } else {
             res.send('Invalid email or password. <a href="/">Try again</a>');
         }
