@@ -1,0 +1,38 @@
+{
+    "name": "array",
+    "version": "1.0.0",
+    "scripts": {
+        "test": "test",
+        "dev": "ts-node-dev  --respawn src/index.ts",
+        "seed": "ts-node prisma/seed.ts"
+    },
+    "description": "test array using ts",
+    "keywords": [
+        "array"
+    ],
+    "homepage": "https://github.com/shailesh-04/NodeJs/tree/main#readme",
+    "bugs": {
+        "url": "https://github.com/shailesh-04/NodeJs/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shailesh-04/NodeJs.git#main"
+    },
+    "license": "MIT",
+    "author": "shailesh-04",
+    "type": "commonjs",
+    "main": "index.ts",
+    "devDependencies": {
+        "@faker-js/faker": "^9.8.0",
+        "@types/express": "^5.0.3",
+        "@types/node": "^24.0.3",
+        "prisma": "^6.10.1",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.8.3"
+    },
+    "dependencies": {
+        "@prisma/client": "^6.10.1",
+        "04-utils": "file:../../04Utils/04-utils-1.0.2.tgz",
+        "express": "^5.1.0"
+    }
+}

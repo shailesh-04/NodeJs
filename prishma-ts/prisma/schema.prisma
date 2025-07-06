@@ -1,0 +1,83 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int       @id @default(autoincrement())
+  name          String
+  email         String    @unique
+  password      String
+  phone         String?   @unique
+  address       String?
+  city          String?
+  state         String?
+  country       String?
+  postalCode    String?
+  role          String    @default("customer")
+  isActive      Boolean   @default(true)
+  emailVerified Boolean   @default(false)
+  avatarUrl     String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  orders        Order[]
+  products      Product[]
+}
+
+model Product {
+  id              Int       @id @default(autoincrement())
+  title           String
+  description     String
+  vendor          String
+  price           Float
+  compareAtPrice  Float?
+  costPerItem     Float?
+  stock           Int
+  sku             String    @unique
+  barcode         String?   @unique
+  tags            String
+  category        String
+  isPublished     Boolean   @default(true)
+  publishedAt     DateTime?
+  imageUrl        String?
+  additionalImages String
+  rating          Float     @default(0)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user            User      @relation(fields: [userId], references: [id])
+  userId          Int
+
+  orders          Order[]
+}
+
+model Order {
+  id              Int       @id @default(autoincrement())
+  orderNumber     String    @unique
+  quantity        Int
+  subtotal        Float
+  tax             Float
+  total           Float
+  discountCode    String?
+  discountAmount  Float     @default(0)
+  status          String    @default("pending")
+  paymentStatus   String    @default("unpaid")
+  paymentMethod   String    @default("cod")
+  shippingAddress String
+  shippingMethod  String    @default("standard")
+  trackingNumber  String?
+  notes           String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user            User      @relation(fields: [userId], references: [id])
+  userId          Int
+
+  product         Product   @relation(fields: [productId], references: [id])
+  productId       Int
+}
