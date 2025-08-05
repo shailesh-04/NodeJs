@@ -17,7 +17,7 @@ This repository is opened for all of you. just fork it and make a commit. If you
 - Go to the project directory
 
 ```bash
-  cd NodeJs/YourChoiceProject
+  cd ProjectFromList
 ```
 
 - Install dependencies
