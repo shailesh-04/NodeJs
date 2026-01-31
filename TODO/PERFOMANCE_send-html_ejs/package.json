@@ -1,0 +1,18 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "autocannon": "^8.0.0",
+    "concurrently": "^9.2.1"
+  },
+  "scripts": {
+    "start": "concurrently \"node ./ejs-app/index.js\" \"node ./html-app/index.js\"",
+    "test": "echo \"HTML ===/ \" && autocannon -c 50 -d 10 http://localhost:4000/ && echo \"EJS ===/ \" && autocannon -c 50 -d 10 http://localhost:3000/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
