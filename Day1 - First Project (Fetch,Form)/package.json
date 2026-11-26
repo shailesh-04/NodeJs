@@ -1,0 +1,27 @@
+{
+  "name": "day1",
+  "version": "1.0.0",
+  "description": "This Project For Learn Complete Fetch And Form With Nodejs With React,Html,Ejs,etc template lagualge and how to setup on nodejs",
+  "keywords": [
+    "day1"
+  ],
+  "author": "Shaileshm04",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "test": "test"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.11",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "mongoose": "^9.13.1"
+  }
+}

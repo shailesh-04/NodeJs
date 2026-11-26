@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Girlfriend</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="avatar" id="avatar">R</div>
+      <div class="who">
+        <div class="name" id="gfName">Riya</div>
+        <div class="status" id="status">online</div>
+      </div>
+      <button class="icon" id="settingsBtn" title="Settings">⚙️</button>
+    </header>
+
+    <main id="messages"></main>
+
+    <form id="composer">
+      <textarea id="input" rows="1" placeholder="Message lakho…" autocomplete="off"></textarea>
+      <button type="submit" id="sendBtn">➤</button>
+    </form>
+  </div>
+
+  <dialog id="settings">
+    <form method="dialog" id="settingsForm">
+      <h2>Settings</h2>
+      <label>Your name <input name="userName" maxlength="100" /></label>
+      <label>Her name <input name="gfName" maxlength="100" required /></label>
+      <label>Her personality <textarea name="personality" rows="3" maxlength="500"></textarea></label>
+      <label>What she remembers about you (one per line)
+        <textarea name="memories" rows="5"></textarea>
+      </label>
+      <div class="row">
+        <button type="button" class="danger" id="resetBtn">Clear chat &amp; memories</button>
+        <span class="spacer"></span>
+        <button value="cancel" formnovalidate>Cancel</button>
+        <button value="save" class="primary">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
